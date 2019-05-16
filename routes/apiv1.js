@@ -7,7 +7,8 @@ var request = REQUEST.defaults( {
     strictSSL: false
 });
 
-var OPENWEATHERURL = "http://api.openweathermap.org/data/2.5/weather?q={city name}&units=metric";
+var OPENWEATHERURL = "http://api.openweathermap.org/data/2.5/weather?q={city name}";
+//&units=metric";
 
 exports.getWeather = function(req, res) {
 	var zip = req.query.zip;
@@ -46,7 +47,7 @@ exports.getWeather2 = function(req, res) {
 		return res.status(400).send('zip missing');
 	}
 
-	var aurl = OPENWEATHERURL + '&zip=' + zip + ',us';
+	var aurl = OPENWEATHERURL + '&zip=' + zip + ',nz';
 
 	request({
 		method: 'GET',
