@@ -11,7 +11,7 @@ var request = REQUEST.defaults( {
 
 //var OPENWEATHERURL = "http://api.openweathermap.org/data/2.5/weather?id=524901&APPID={6b7b471967dd0851d0010cdecf28f829}";
 //var OPENWEATHERURL = "http://api.openweathermap.org/data/2.5/weather?appid=6f9927c97f4a2621ce91e7477afaac42&q={city name}";
-var OPENWEATHERURL ="http://api.openweathermap.org/data/2.5/weather?appid=6b7b471967dd0851d0010cdecf28f829&units=imperial";
+//var OPENWEATHERURL ="http://api.openweathermap.org/data/2.5/weather?appid=6b7b471967dd0851d0010cdecf28f829&units=imperial";
 //&units=metric";
 
 exports.getWeather = function(req, res) {
