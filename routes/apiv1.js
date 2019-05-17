@@ -23,7 +23,7 @@ exports.getWeather = function(req, res) {
 		return res.status(400).send('zip missing');
 	}
 
-	var aurl = OPENWEATHERURL + zip + "";
+	var aurl = OPENWEATHERURL + zip + "&unit=metric&APPID=6f9927c97f4a2621ce91e7477afaac42";
 
 	request({
 		method: 'GET',
@@ -54,7 +54,7 @@ exports.getWeather2 = function(req, res) {
 		return res.status(400).send('zip missing');
 	}
 
-	var aurl = OPENWEATHERURL + zip + "";
+	var aurl = OPENWEATHERURL + zip + "&unit=metric&APPID=6f9927c97f4a2621ce91e7477afaac42";
 
 	request({
 		method: 'GET',
