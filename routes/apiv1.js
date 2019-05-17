@@ -13,6 +13,9 @@ var request = REQUEST.defaults( {
 //var OPENWEATHERURL = "http://api.openweathermap.org/data/2.5/weather?appid=6f9927c97f4a2621ce91e7477afaac42&q={city name}";
 //var OPENWEATHERURL ="http://api.openweathermap.org/data/2.5/weather?appid=6b7b471967dd0851d0010cdecf28f829&units=imperial";
 //&units=metric";
+var OPENWEATHERURL = "http://api.openweathermap.org/data/2.5/weather?q=";
+
+
 
 exports.getWeather = function(req, res) {
 	var zip = req.query.zip;
@@ -20,7 +23,7 @@ exports.getWeather = function(req, res) {
 		return res.status(400).send('zip missing');
 	}
 
-	var aurl = OPENWEATHERURL + '&zip=' + zip + ',us';
+	var aurl = OPENWEATHERURL + zip + "";
 
 	request({
 		method: 'GET',
@@ -51,7 +54,7 @@ exports.getWeather2 = function(req, res) {
 		return res.status(400).send('zip missing');
 	}
 
-	var aurl = OPENWEATHERURL + '&zip=' + zip + ',nz';
+	var aurl = OPENWEATHERURL + zip + "";
 
 	request({
 		method: 'GET',
